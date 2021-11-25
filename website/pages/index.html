@@ -1,0 +1,27 @@
+{% extends "../templates/base.html" %}
+{% block title %}Lyncex - Building blocks for web development in Prolog{% endblock %}
+{% block content %}
+<div>
+<p>Lyncex is a collection of libraries and tools to enable a fast, correct and elegant use of Prolog for web development and modern software engineering. Based on ISO Prolog, we try to make an stable and free environment which allows people use Prolog and Logtalk for common software tasks (mainly web related). That way, we can use all the advantages of logic programming in real world.</p>
+
+<blockquote><i>Building blocks for web development in Prolog</i></blockquote>
+
+<p>Current Lyncex projects:</p>
+<div class="grid">
+    <div>
+        <h3>Scryer HTTP Server</h3>
+        <p>A simple HTTP 1.0 server, included by default on <a href="https://github.com/mthom/scryer-prolog">Scryer Prolog</a>, allows basic webapps. All REST verbs, GET queries, urlencoded forms are supported right now.</p>
+    </div>
+    <div>
+        <h3>PostgreSQL Prolog</h3>
+        <p>A library that connects to PostgreSQL databases allowing a big range of SQL queries.</p>
+    </div>
+    <div>
+        <h3>Teruel</h3>
+        <p>A template engine based on Tera and Jinja</p>
+    </div>
+</div>
+<p>Do you think your project also fits into Lyncex? Contact us and it will appear here.</p>
+<p>The Lyncex project was started by <a href="https://adrianistan.eu">Adrián Arroyo Calle</a> but anyone can join!</p>
+</div>
+{% endblock %}

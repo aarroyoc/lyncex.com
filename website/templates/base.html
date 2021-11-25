@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <nav>
+    <div class="list-item">
+      <a class="list-item-link" href="/">Lyncex</a>
+    </div>
+    {% for project in projects %}
+    <div class="list-item">
+      <a class="list-item-link" href="{{ project.link }}">{{ project.text }}</a>
+    </div>
+    {% endfor %}
+  </nav>
+  <main>
+    <h1>{% block title %}{% endblock %}</h1>
+    <article>
+      {% block content %}{% endblock %}
+    </article>
+    <footer>
+      &copy; Adrián Arroyo Calle 2020-2021
+    </footer>
+<!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+{% raw %}
+<script>
+  (function(f, a, t, h, o, m){
+    a[h]=a[h]||function(){
+      (a[h].q=a[h].q||[]).push(arguments)
+    };
+    o=f.createElement('script'),
+    m=f.getElementsByTagName('script')[0];
+    o.async=1; o.src=t; o.id='fathom-script';
+    m.parentNode.insertBefore(o,m)
+  })(document, window, '//stats.adrianistan.eu/tracker.js', 'fathom');
+  fathom('set', 'siteId', 'HHAYP');
+  fathom('trackPageview');
+  </script>
+{% endraw %}
+  <!-- / Fathom -->
+</body>
+</html>
